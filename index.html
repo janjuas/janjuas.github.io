@@ -3,23 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!--💡UPDATE: Change the title to your name-->
-    <title>Your Name | Data Analysis Portfolio</title>
-      
-    <!--💡UPDATE: Add your favicon here. You can generate one at realfavicongenerator.net-->
+
+    <title>Shawal Janjua | Data Analysis Portfolio</title>
+
     <link rel="icon" type="image/png" href="/favicon-32x32.png">
     <link rel="apple-touch-icon" href="/favicon-32x32.png">
-    
-    <!-- Google Fonts for Elegant Typography -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome for Icons -->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    
-    <!-- Your Stylesheet -->
+
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -27,15 +22,12 @@
 <!-- HEADER SECTION -->
 <header>
     <div class="container">
-        <!--💡UPDATE: Change to your name and title-->
-        <h1>Your Name</h1>
-        <p>Data Analyst | Power BI Developer | Your Title Here</p>
+        <h1>Shawal Janjua</h1>
+        <p>Data Analyst</p>
         <div class="social-links">
-            <!--💡UPDATE: Add your social media links and CV file-->
-            <a href="[YOUR_LINKEDIN_URL]" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="[YOUR_GITHUB_URL]" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-            <a href="[YOUR_YOUTUBE_URL]" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
-            <a href="assets/Your_Name_CV.pdf" download title="Download CV"><i class="fas fa-file-arrow-down"></i></a>
+            <a href="https://www.linkedin.com/in/shawaljanjua/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/janjuas" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="assets/Sample CV.pdf" download title="Download CV"><i class="fas fa-file-arrow-down"></i></a>
         </div>
     </div>
 </header>
@@ -46,9 +38,11 @@
         <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        <button class="dark-mode-btn" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
     </div>
 </nav>
 
@@ -56,13 +50,12 @@
 <section id="about" class="section">
     <div class="container">
         <h2>About Me</h2>
-        <div class="about-content">
-            <!--💡UPDATE: Change the image to your own profile photo in assets/images/-->
-            <img src="assets/images/profile-placeholder.jpg" alt="Your Name" class="profile-photo">
+        <div class="about-content animate-on-scroll">
+            <!-- UPDATE: Add your profile photo to assets/images/ and update this src -->
+            <img src="assets/images/profile-placeholder.jpg" alt="Shawal Janjua" class="profile-photo">
             <div class="about-text">
-                <!--💡UPDATE: Write your own 'About Me' text here-->
-                <p> I'm a data professional with expertise in transforming complex datasets into actionable insights. My work focuses on creating interactive visualizations and data-driven stories that help organizations make informed decisions.</p>
-                <p>With experience in Power BI, SQL, and data modeling, I specialize in developing comprehensive reports that reveal hidden patterns and trends in data. This portfolio showcases my projects across various sectors.</p>
+                <p>I'm a data professional with a passion for turning complex datasets into clear, actionable insights. My work spans Power BI dashboard development, SQL-driven analysis, and Python-based data pipelines — helping organisations make faster, more confident decisions.</p>
+                <p>With hands-on experience in DAX, star-schema data modelling, and ETL engineering, I specialise in building end-to-end analytics solutions. This portfolio showcases projects across housing markets, e-commerce, HR analytics, and public health data.</p>
             </div>
         </div>
     </div>
@@ -74,58 +67,155 @@
         <h2>My Projects</h2>
         <div class="projects-grid">
 
-            <!--💡UPDATE: Replace this with your own project. Add as many as you like!-->
-            <!-- Project 1 -->
-             <div class="project-card">
-                <!--💡UPDATE: Add a preview image of your project to assets/images/ -->
-                <img src="assets/images/project-placeholder-1.jpg" alt="Project One Preview">
+            <!-- Project 1: UK Housing -->
+            <div class="project-card animate-on-scroll">
+                <img src="assets/images/US-Elec.png" alt="UK Housing Market Analysis">
                 <div class="project-card-content">
-                    <h3>Project Title One</h3>
-                    <p>A brief, one or two-sentence description of your project, what it does, and the tools you used.</p>
+                    <h3>UK Housing Market Analysis</h3>
+                    <div class="project-tags">
+                        <span class="tag">Power BI</span>
+                        <span class="tag">DAX</span>
+                        <span class="tag">Power Query</span>
+                        <span class="tag">SQL</span>
+                    </div>
+                    <p>Interactive Power BI report tracking regional house price trends (2010–2024) across all UK regions. Features dynamic slicers for property type, area, and time period with year-on-year % change analysis.</p>
                     <div class="project-buttons">
-                        <!--💡UPDATE: Add link to your project's code/documentation on GitHub-->
-                        <a href="[YOUR_GITHUB_PROJECT_URL]" target="_blank" class="btn">Documentation</a>
-                        <!--💡UPDATE: Add link to your live dashboard (e.g., Power BI, Tableau Public)-->
-                        <a href="[YOUR_LIVE_DASHBOARD_URL]" target="_blank" class="btn btn-secondary">View Dashboard</a>
+                        <a href="https://github.com/janjuas/uk-housing-analysis" target="_blank" class="btn">Documentation</a>
+                        <button class="btn btn-secondary pbi-trigger" data-embed="https://app.powerbi.com/view?r=YOUR_UK_HOUSING_EMBED_TOKEN">View Dashboard</button>
                     </div>
                 </div>
             </div>
 
-            <!-- Project 2 -->
-            <div class="project-card">
-                <img src="assets/images/project-placeholder-2.jpg" alt="Project Two Preview">
+            <!-- Project 2: E-Commerce Segmentation -->
+            <div class="project-card animate-on-scroll">
+                <img src="assets/images/US-Elec.png" alt="E-Commerce Customer Segmentation">
                 <div class="project-card-content">
-                    <h3>Project Title Two</h3>
-                    <p>A brief, one or two-sentence description of your project, what it does, and the tools you used.</p>
+                    <h3>E-Commerce Customer Segmentation</h3>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Pandas</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">Matplotlib</span>
+                    </div>
+                    <p>RFM (Recency, Frequency, Monetary) analysis on 500k+ order records to classify customer value tiers. Identifies at-risk segments and surfaces upsell opportunities for the marketing team.</p>
                     <div class="project-buttons">
-                        <a href="[YOUR_GITHUB_PROJECT_URL]" target="_blank" class="btn">Documentation</a>
-                        <a href="[YOUR_LIVE_DASHBOARD_URL]" target="_blank" class="btn btn-secondary">View Dashboard</a>
+                        <a href="https://github.com/janjuas/ecommerce-segmentation" target="_blank" class="btn">Documentation</a>
+                        <a href="https://github.com/janjuas/ecommerce-segmentation" target="_blank" class="btn btn-secondary">View on GitHub</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Project 3 -->
-            <div class="project-card">
-                <img src="assets/images/project-placeholder-3.jpg" alt="Project Three Preview">
+            <!-- Project 3: HR Attrition -->
+            <div class="project-card animate-on-scroll">
+                <img src="assets/images/US-Elec.png" alt="HR Attrition Intelligence Dashboard">
                 <div class="project-card-content">
-                    <h3>Project Title Three</h3>
-                    <p>A brief, one or two-sentence description of your project, what it does, and the tools you used.</p>
+                    <h3>HR Attrition Intelligence Dashboard</h3>
+                    <div class="project-tags">
+                        <span class="tag">Power BI</span>
+                        <span class="tag">DAX</span>
+                        <span class="tag">Star Schema</span>
+                    </div>
+                    <p>Identifies key attrition drivers — tenure, department, salary band, and manager — across an 8,000-employee dataset. Built on a star-schema data model with HR and payroll fact tables.</p>
                     <div class="project-buttons">
-                        <a href="[YOUR_GITHUB_PROJECT_URL]" target="_blank" class="btn">Documentation</a>
-                        <a href="[YOUR_LIVE_DASHBOARD_URL]" target="_blank" class="btn btn-secondary">View Dashboard</a>
+                        <a href="https://github.com/janjuas/hr-attrition-dashboard" target="_blank" class="btn">Documentation</a>
+                        <button class="btn btn-secondary pbi-trigger" data-embed="https://app.powerbi.com/view?r=YOUR_HR_ATTRITION_EMBED_TOKEN">View Dashboard</button>
                     </div>
                 </div>
             </div>
 
-            <!-- Project 4 -->
-            <div class="project-card">
-                <img src="assets/images/project-placeholder-4.jpg" alt="Project Four Preview">
+            <!-- Project 4: Public Health Pipeline -->
+            <div class="project-card animate-on-scroll">
+                <img src="assets/images/US-Elec.png" alt="Public Health Data Pipeline">
                 <div class="project-card-content">
-                    <h3>Project Title Four</h3>
-                    <p>A brief, one or two-sentence description of your project, what it does, and the tools you used.</p>
+                    <h3>Public Health Data Pipeline</h3>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">ETL</span>
+                        <span class="tag">PostgreSQL</span>
+                    </div>
+                    <p>End-to-end pipeline ingesting WHO and ONS public datasets. Automates data cleaning, standardisation, and load into a structured PostgreSQL mart — enabling downstream trend analysis and reporting.</p>
                     <div class="project-buttons">
-                        <a href="[YOUR_GITHUB_PROJECT_URL]" target="_blank" class="btn">Documentation</a>
-                        <a href="[YOUR_LIVE_DASHBOARD_URL]" target="_blank" class="btn btn-secondary">View Dashboard</a>
+                        <a href="https://github.com/janjuas/public-health-pipeline" target="_blank" class="btn">Documentation</a>
+                        <a href="https://github.com/janjuas/public-health-pipeline" target="_blank" class="btn btn-secondary">View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- WORK EXPERIENCE SECTION -->
+<section id="experience" class="section">
+    <div class="container">
+        <h2>Work Experience</h2>
+        <div class="timeline">
+
+            <!-- Role 1 -->
+            <div class="timeline-item animate-on-scroll">
+                <div class="timeline-period">Jan 2023 – Present</div>
+                <div class="timeline-content">
+                    <button class="timeline-toggle" aria-expanded="false">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Data Analyst</h3>
+                                <span class="timeline-company">Acme Analytics Ltd</span>
+                            </div>
+                            <i class="fas fa-chevron-down timeline-chevron"></i>
+                        </div>
+                    </button>
+                    <div class="timeline-body" hidden>
+                        <ul>
+                            <li>Built Power BI dashboards tracking KPIs for 200+ stakeholders across 5 business units</li>
+                            <li>Reduced monthly reporting time by 60% through automated SQL stored procedures</li>
+                            <li>Designed and maintained a star-schema data model in Azure SQL Database</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Role 2 -->
+            <div class="timeline-item animate-on-scroll">
+                <div class="timeline-period">Jun 2021 – Dec 2022</div>
+                <div class="timeline-content">
+                    <button class="timeline-toggle" aria-expanded="false">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Junior Data Analyst</h3>
+                                <span class="timeline-company">DataFirst Consulting</span>
+                            </div>
+                            <i class="fas fa-chevron-down timeline-chevron"></i>
+                        </div>
+                    </button>
+                    <div class="timeline-body" hidden>
+                        <ul>
+                            <li>Delivered client-facing Excel and Power BI reports for retail and FMCG clients</li>
+                            <li>Performed customer segmentation using Python (Pandas) on 500k+ transaction records</li>
+                            <li>Collaborated with data engineers to define ETL requirements and data quality standards</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Role 3 -->
+            <div class="timeline-item animate-on-scroll">
+                <div class="timeline-period">Sep 2020 – May 2021</div>
+                <div class="timeline-content">
+                    <button class="timeline-toggle" aria-expanded="false">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Data Analyst Intern</h3>
+                                <span class="timeline-company">FinServe Group</span>
+                            </div>
+                            <i class="fas fa-chevron-down timeline-chevron"></i>
+                        </div>
+                    </button>
+                    <div class="timeline-body" hidden>
+                        <ul>
+                            <li>Supported senior analysts with data cleaning, validation, and ad-hoc SQL queries</li>
+                            <li>Created Excel dashboards to visualise loan portfolio performance metrics</li>
+                            <li>Documented data definitions and business rules for the internal data catalogue</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -139,47 +229,49 @@
     <div class="container">
         <h2>Technical Skillset</h2>
         <div class="skills-table">
-            
-            <!--💡UPDATE: Customize your skills in each category-->
+
             <!-- Column 1: Data Visualization -->
-            <div class="skill-column">
+            <div class="skill-column animate-on-scroll">
                 <div class="skill-header">
                     <i class="fas fa-chart-pie"></i>
                     <h3>Data Visualization</h3>
                 </div>
                 <ul class="skill-list">
                     <li>Power BI</li>
-                    <li>Tableau</li>
-                    <li>Looker Studio</li>
+                    <li>DAX</li>
+                    <li>Power Query (M)</li>
                     <li>Excel Dashboards</li>
+                    <li>Matplotlib</li>
                 </ul>
             </div>
 
             <!-- Column 2: Data Analysis -->
-            <div class="skill-column">
+            <div class="skill-column animate-on-scroll">
                 <div class="skill-header">
                     <i class="fas fa-search-plus"></i>
                     <h3>Data Analysis</h3>
                 </div>
                 <ul class="skill-list">
                     <li>SQL</li>
-                    <li>Advanced Excel</li>
                     <li>Python (Pandas)</li>
-                    <li>Google Sheets</li>
+                    <li>NumPy</li>
+                    <li>RFM Analysis</li>
+                    <li>Advanced Excel</li>
                 </ul>
             </div>
 
-            <!-- Column 3: Data Modeling & ETL -->
-            <div class="skill-column">
+            <!-- Column 3: Data Engineering -->
+            <div class="skill-column animate-on-scroll">
                 <div class="skill-header">
                     <i class="fas fa-cogs"></i>
-                    <h3>Data Modeling & ETL</h3>
+                    <h3>Data Engineering</h3>
                 </div>
                 <ul class="skill-list">
-                    <li>Power Query (M)</li>
-                    <li>DAX</li>
-                    <li>Star Schema Design</li>
                     <li>ETL Processes</li>
+                    <li>Star Schema Design</li>
+                    <li>Data Cleaning</li>
+                    <li>PostgreSQL</li>
+                    <li>Azure SQL Database</li>
                 </ul>
             </div>
 
@@ -191,12 +283,10 @@
 <section id="contact" class="section">
     <div class="container">
         <h2>Send me a message</h2>
-        
-        <!--💡UPDATE: Go to formsubmit.co and replace the email with your own-->
-        <form action="https://formsubmit.co/your-email@example.com" method="POST" class="contact-form">
-            <p> Interested in collaborating or have questions about my work? I'd love to hear from you!</p>
 
-            <!-- Form Fields -->
+        <form action="https://formsubmit.co/contact@shawaljanjua.com" method="POST" class="contact-form animate-on-scroll">
+            <p>Interested in collaborating or have questions about my work? I'd love to hear from you.</p>
+
             <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" name="name" id="name" placeholder="Your name" required>
@@ -213,10 +303,8 @@
                 <label for="message">Message</label>
                 <textarea name="message" id="message" rows="6" placeholder="Your message" required></textarea>
             </div>
-            
-            <!-- Submit Button -->
-            <button type="submit" class="btn">Send Message</button>
 
+            <button type="submit" class="btn">Send Message</button>
         </form>
     </div>
 </section>
@@ -224,10 +312,17 @@
 <!-- FOOTER -->
 <footer>
     <div class="container">
-        <!--💡UPDATE: Change the year and your name-->
-        <p>&copy; 2025 Your Name. All rights reserved.</p>
+        <p>&copy; 2025 Shawal Janjua. All rights reserved.</p>
     </div>
 </footer>
+
+<!-- POWER BI EMBED MODAL -->
+<div id="pbi-modal" class="modal-overlay" aria-hidden="true">
+    <div class="modal-container">
+        <button class="modal-close" aria-label="Close dashboard">&times;</button>
+        <iframe id="pbi-frame" src="" allowfullscreen></iframe>
+    </div>
+</div>
 
 <script src="assets/js/main.js"></script>
 
