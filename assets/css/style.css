@@ -1,16 +1,14 @@
 
-/* --- 1. Variables (Modern Tech Palette) --- */
+/* --- 1. Variables (Clean White / Minimal Palette) --- */
 :root {
-    /* This template uses a professional "Modern Tech" color scheme. */
-    --primary-color: #1A2A4C;   /* Midnight Blue */
-    --secondary-color: #3D5A80; /* Slate Blue */
-    --accent-color: #29B6F6;    /* Vivid Sky Blue */
+    --primary-color: #111827;   /* Near Black */
+    --secondary-color: #374151; /* Dark Grey */
+    --accent-color: #0891B2;    /* Teal */
 
-    /* --- Shared Variables (These usually don't need to change) --- */
-    --light-bg-color: #F8F9FA;
+    --light-bg-color: #F9FAFB;
     --white-color: #ffffff;
-    --dark-text-color: #343A40;
-    --light-text-color: #6c757d;
+    --dark-text-color: #1F2937;
+    --light-text-color: #6B7280;
     --card-bg-color: #ffffff;
     
     /* Fonts */
@@ -98,7 +96,7 @@ header p {
 
 /* --- 4. Navigation --- */
 nav {
-    background-color: rgba(26, 42, 76, 0.95); /* Adjusted for new primary color */
+    background-color: rgba(17, 24, 39, 0.97);
     backdrop-filter: blur(5px);
     position: sticky;
     top: 0;
@@ -391,7 +389,7 @@ nav ul li a:hover::after {
 .contact-form textarea:focus {
     outline: none;
     border-color: var(--accent-color);
-    box-shadow: 0 0 0 3px rgba(41, 182, 246, 0.25); /* Adjusted for new accent color */
+    box-shadow: 0 0 0 3px rgba(8, 145, 178, 0.2);
 }
 
 .contact-form button.btn {
@@ -417,7 +415,307 @@ footer p {
     opacity: 0.7;
 }
 
-/* --- 9. Responsive Design --- */
+/* --- 9. Dark Mode --- */
+[data-theme="dark"] {
+    --light-bg-color: #111827;
+    --card-bg-color: #1F2937;
+    --dark-text-color: #E5E7EB;
+    --light-text-color: #9CA3AF;
+    --white-color: #1F2937;
+}
+
+[data-theme="dark"] body {
+    background-color: #111827;
+    color: #E5E7EB;
+}
+
+[data-theme="dark"] .section h2 {
+    color: #F9FAFB;
+}
+
+[data-theme="dark"] .project-card-content h3,
+[data-theme="dark"] .skill-header h3,
+[data-theme="dark"] .timeline-content h3 {
+    color: #F9FAFB;
+}
+
+[data-theme="dark"] .skill-column:not(:last-child) {
+    border-right-color: #374151;
+}
+
+[data-theme="dark"] .skill-list li {
+    border-bottom-color: #374151;
+    color: #E5E7EB;
+}
+
+[data-theme="dark"] .contact-form input,
+[data-theme="dark"] .contact-form textarea {
+    background: #374151;
+    border-color: #4B5563;
+    color: #E5E7EB;
+}
+
+[data-theme="dark"] .contact-form label {
+    color: #E5E7EB;
+}
+
+[data-theme="dark"] .btn-secondary {
+    color: #E5E7EB;
+    border-color: #E5E7EB;
+}
+
+[data-theme="dark"] .btn-secondary:hover {
+    background: #E5E7EB;
+    color: #111827;
+}
+
+[data-theme="dark"] .timeline-item::before {
+    border-color: #1F2937;
+}
+
+/* --- 9.1 Dark Mode Toggle Button --- */
+.dark-mode-btn {
+    background: none;
+    border: none;
+    color: var(--white-color);
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 15px 20px;
+    transition: color 0.3s ease;
+    margin-left: auto;
+}
+
+nav .container {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    flex: 1;
+}
+
+.dark-mode-btn:hover {
+    color: var(--accent-color);
+}
+
+/* --- 9.2 Scroll Animations --- */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.projects-grid .project-card:nth-child(2),
+.skills-table .skill-column:nth-child(2),
+.timeline .timeline-item:nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+.projects-grid .project-card:nth-child(3),
+.skills-table .skill-column:nth-child(3),
+.timeline .timeline-item:nth-child(3) {
+    transition-delay: 0.2s;
+}
+
+.projects-grid .project-card:nth-child(4) {
+    transition-delay: 0.3s;
+}
+
+/* --- 9.3 Project Tag Badges --- */
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background: rgba(8, 145, 178, 0.1);
+    color: var(--accent-color);
+    letter-spacing: 0.3px;
+}
+
+/* --- 9.4 Timeline (Work Experience) --- */
+.timeline {
+    position: relative;
+    padding-left: 50px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    bottom: 8px;
+    width: 3px;
+    background: var(--accent-color);
+    border-radius: 3px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 45px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -57px;
+    top: 8px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--accent-color);
+    border: 3px solid #F9FAFB;
+    box-shadow: 0 0 0 2px var(--accent-color);
+}
+
+[data-theme="dark"] .timeline-item::before {
+    border-color: #111827;
+}
+
+.timeline-period {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.timeline-content {
+    background: var(--card-bg-color);
+    padding: 28px 32px;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.timeline-content h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 4px;
+}
+
+.timeline-company {
+    font-size: 1rem;
+    color: var(--light-text-color);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.timeline-toggle {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-align: left;
+}
+
+.timeline-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.timeline-chevron {
+    color: var(--accent-color);
+    font-size: 1rem;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.timeline-toggle[aria-expanded="true"] .timeline-chevron {
+    transform: rotate(180deg);
+}
+
+.timeline-body {
+    margin-top: 18px;
+}
+
+.timeline-body[hidden] {
+    display: none;
+}
+
+.timeline-content ul {
+    padding-left: 20px;
+    color: var(--dark-text-color);
+}
+
+.timeline-content ul li {
+    padding: 5px 0;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+/* --- 9.5 Power BI Modal --- */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-overlay.open {
+    display: flex;
+}
+
+.modal-container {
+    position: relative;
+    width: 90%;
+    max-width: 1100px;
+    height: 80vh;
+    background: #000;
+    border-radius: 8px;
+}
+
+#pbi-frame {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+}
+
+.modal-close {
+    position: absolute;
+    top: -44px;
+    right: 0;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2.2rem;
+    cursor: pointer;
+    line-height: 1;
+    padding: 4px 8px;
+    transition: opacity 0.2s ease;
+}
+
+.modal-close:hover {
+    opacity: 0.7;
+}
+
+/* --- 10. Responsive Design --- */
 @media (max-width: 992px) {
     .skills-table {
         grid-template-columns: 1fr 1fr;
@@ -455,5 +753,27 @@ footer p {
         border-right: none;
         border-bottom: 1px solid #e9ecef;
         padding-bottom: 30px;
+    }
+
+    .timeline {
+        padding-left: 30px;
+    }
+
+    .timeline-item::before {
+        left: -37px;
+    }
+
+    .timeline-content {
+        padding: 20px 22px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-container {
+        height: 60vh;
     }
 }
