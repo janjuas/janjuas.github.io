@@ -477,7 +477,7 @@ footer p {
 .dark-mode-btn {
     background: none;
     border: none;
-    color: var(--white-color);
+    color: #ffffff;
     font-size: 1.1rem;
     cursor: pointer;
     padding: 15px 20px;
