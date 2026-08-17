@@ -198,6 +198,12 @@ nav ul li a:hover::after {
     gap: 40px;
 }
 
+/* Keep a lone project card from stretching the full grid width */
+.projects-grid:has(> .project-card:only-child) {
+    max-width: 560px;
+    margin: 0 auto;
+}
+
 .project-card {
     background: var(--card-bg-color);
     border-radius: 5px;
@@ -215,8 +221,8 @@ nav ul li a:hover::after {
 
 .project-card img {
     width: 100%;
-    height: 220px;
-    object-fit: cover;
+    height: auto;
+    display: block;
 }
 
 .project-card-content {
@@ -346,6 +352,55 @@ nav ul li a:hover::after {
 
 .skill-list li:last-child {
     border-bottom: none;
+}
+
+/* --- 6.1 Certifications & Education --- */
+.credentials-heading {
+    font-family: var(--font-heading);
+    font-size: 1.9rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin: 70px 0 30px;
+}
+
+.credentials {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.credential-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    background: var(--card-bg-color);
+    padding: 24px 28px;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.credential-card i {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    margin-top: 4px;
+    flex-shrink: 0;
+}
+
+.credential-card h4 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--dark-text-color);
+    line-height: 1.5;
+    margin-bottom: 2px;
+}
+
+.credential-card span {
+    font-size: 0.9rem;
+    color: var(--light-text-color);
+}
+
+[data-theme="dark"] .credentials-heading {
+    color: #F9FAFB;
 }
 
 /* --- 7. Contact Form --- */
@@ -650,6 +705,12 @@ nav ul {
     margin-top: 18px;
 }
 
+.timeline-body > p {
+    color: var(--light-text-color);
+    font-size: 1rem;
+    margin-bottom: 14px;
+}
+
 .timeline-body[hidden] {
     display: none;
 }
@@ -752,6 +813,10 @@ nav ul {
         border-right: none;
         border-bottom: 1px solid #e9ecef;
         padding-bottom: 30px;
+    }
+
+    .credentials {
+        grid-template-columns: 1fr;
     }
 
     .timeline {
