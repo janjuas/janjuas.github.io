@@ -200,7 +200,7 @@ nav ul li a:hover::after {
 
 /* Keep a lone project card from stretching the full grid width */
 .projects-grid:has(> .project-card:only-child) {
-    max-width: 560px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
