@@ -1,61 +1,41 @@
-# [Your Name] - Data Analysis Portfolio
+# Data Analytics Projects — Shawal Janjua
 
-Welcome! This repository contains the complete template for a professional, one-page data analysis portfolio website, hosted for free on GitHub Pages.
+A working repository of end-to-end analytics projects: data modelling, DAX, SQL, Python
+pipelines, and the Power BI reports built on top of them.
 
-## About This Portfolio Template
+Each project lives in its **own top-level folder** and has its own report, explaining the business question and the findings.
 
-This portfolio is designed to demonstrate skills in:
-- Data visualization and storytelling
-- Data modeling and analysis
-- Creating interactive, professional dashboards
-- Transforming complex data into actionable insights
+**Portfolio site:** [janjuas.github.io](https://janjuas.github.io) ·
+**LinkedIn:** [shawaljanjua](https://www.linkedin.com/in/shawaljanjua/)
 
-## 🚀 Projects
+---
 
-This template is set up to showcase your best work. You can easily customize the project cards in the `index.html` file.
+## Project index
 
-### Project Title One
-*A brief description of your project, the tools used, and the key insights derived.*
+| # | Project | Folder | Stack | Status |
+|---|---|---|---|---|
+| 1 | **Airport Travel Retail BI** — spend-per-passenger performance across a 25-outlet duty-free estate | [`Airport Retail Analytics/`](https://github.com/janjuas/Analytics-Projects/tree/main/Airport%20Retail%20Analysis) | Power BI · DAX · Python · Star schema | ✅ Complete |
 
-### Project Title Two
-*A brief description of your project, the tools used, and the key insights derived.*
+---
 
-### Project Title Three
-*A brief description of your project, the tools used, and the key insights derived.*
+## Featured — Airport Travel Retail BI
 
+The most complete project in the repository. A airport duty-free dataset and
+Power BI analysis built around the metric that actually governs travel retail:
 
-## 🛠️ Skills
+```
+Spend Per Passenger  =  Capture Rate  ×  Average Transaction Value
+                        (Txns / Pax)     (Net Sales / Txns)
+```
 
-Update the `index.html` file to reflect your personal technical skillset. The template is organized into key categories:
+Every movement in sales is attributed to one of three causes — traffic changed, capture
+changed, or basket changed — and margin is decomposed a second time to account for
+vendor trade income, which a gross-margin-only view would miss entirely.
 
-- **Data Visualization**: Power BI, Tableau, Matplotlib, etc.
-- **Data Analysis**: SQL, Python (Pandas), R, Excel, etc.
-- **Data Modeling**: Power Query, DAX, Star Schema Design, etc.
-- **Tools**: List any other relevant tools like Power BI Service, specific cloud platforms, etc.
+---
 
-## 💡 How to Use This Template
+## Contact
 
-Creating your own portfolio from this template is a simple, four-step process.
-
-### 1. Create a New Repository from this Template
-Click the green **"Use this template"** button at the top of this repository page, then select **"Create a new repository"**.
-
-### 2. Name Your Repository for GitHub Pages
-This is the most important step. To turn your portfolio into a live website, you **must** name your new repository in the following format:
-`your-username.github.io`
-*(Replace `your-username` with your actual GitHub username.)*
-
-### 3. Customize Your Portfolio
-Open the `index.html` file and begin personalizing it. The file contains helpful `<!--💡UPDATE: ... -->` comments to guide you on where to change:
-- Your name and title
-- Social media links
-- The "About Me" section
-- Your project titles, descriptions, and links
-- Your list of skills
-
-### 4. Add Your Files
-- Upload your profile photo and project preview images to the `assets/images/` folder.
-- Upload your CV (e.g., in PDF format) to the `assets/` folder.
-- Create your favicon and add it to the root folder.
-
-Once you commit your changes, your new portfolio website will be live at `https://your-username.github.io` within a few minutes!
+- **Portfolio** — [janjuas.github.io](https://janjuas.github.io)
+- **LinkedIn** — [linkedin.com/in/shawaljanjua](https://www.linkedin.com/in/shawaljanjua/)
+- **GitHub** — [@janjuas](https://github.com/janjuas)
